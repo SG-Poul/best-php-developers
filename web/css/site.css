@@ -1,3 +1,8 @@
+@font-face {
+    font-family: ProximaNova;
+    src: url(./fonts/ProximaNova-Extrabld.ttf);
+}
+
 html,
 body {
     height: 100%;
@@ -112,4 +117,162 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+/*Header*/
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+.navbar-default .navbar-brand {
+    color: #173765;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #173765;
+    font-weight: bold;
+}
+.navbar-default .navbar-text {
+    color: #173765;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #173765;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #173765;
+    font-weight: bold;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #173765;
+    font-weight: bold;
+    background-color: #ffffff;
+
+    text-decoration: none;
+    border-bottom: 3px solid #fab917;
+    margin-bottom: -5px;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #173765;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+.navbar-default .navbar-toggle {
+    border-color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #173765;
+    font-weight: bold;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border-color: #173765;
+    font-weight: bold;
+}
+.navbar-default .navbar-link {
+    color: #173765;
+    font-weight: bold;
+}
+.navbar-default .navbar-link:hover {
+    color: #173765;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #173765;
+        font-weight: bold;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #173765;
+        font-weight: bold;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #173765;
+        font-weight: 900;
+        background-color: #ffffff;
+    }
+}
+
+.logo-text {
+    font-family: ProximaNova;
+    font-size: 42px;
+    color: #161f57;
+    padding-bottom: 0px;
+}
+#logo-text-1 {
+    color: #1b245b;
+    display: inline;
+    background: -webkit-linear-gradient(#6489be, #1b245b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#logo-text-2 {
+    color: #1587e0;
+    display: inline;
+    background: -webkit-linear-gradient(#d0e6ff, #1587e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#logo-text-3 {
+    color: #1c76d0;
+    display: inline;
+}
+
+#logo-rectangle-1 {
+    border: 1px solid #415d9d;
+    color: #fff;
+    font-size: 15px;
+    background-color: #415d9d;
+    width: 470px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+#logo-rectangle-2 {
+    margin-top: 5px;
+    border: 1px solid #82aee5;
+    color: #fff;
+    font-size: 13px;
+    background-color: #82aee5;
+    width: 470px;
+    border-radius: 0 0 10px 0;
+    padding-left: 10px;
+    padding-top: 1px;
+}
+
+.inform-table {
+    padding-top: 20px;
+    padding-right: 3px;
+    display: inline-block;
+    float: right;
+}
+
+.social-icon {
+    padding-top: 3px;
+    padding-right: 3px;
+    display: inline-block;
+    float: right;
+}
+
+.ph-num {
+    display: inline-block;
+    color: #2d4871;
+    margin-right: 5px;
+    font-weight: bold;
+    vertical-align: -2px;
 }
