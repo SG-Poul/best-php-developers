@@ -119,3 +119,30 @@ $this->title = 'Best PHP developers';
         <?php ActiveForm::end(); ?>
     </div>
 </div>
+
+<div class="main-about">
+    <img src="/img/main_about_bg.png">
+    <div class="content">
+        <h2><strong>WHO ARE WE</strong></h2>
+        <ul>
+            <li>Superior technology skills</li>
+            <li>Addition to your in-house team members</li>
+            <li>Adherence to the market demands</li>
+            <li>24/7/365 client support service</li>
+            <li>The use of vast knowledge in software development</li>
+            <li>Quality Certification</li>
+            <li>Strict adherence to the deadlines and superior quality work</li>
+            <li>Reasonable and fair prices for PHP development projects in programming</li>
+            <li>Numerous clients all around the world</li>
+            <li>Only highly experienced members that work in PHP</li>
+        </ul>
+        <p style="font-size: 20px; padding-top: 25px"><a class="btn btn-lg btn-warning" href="#">REQUEST FREE QUOTE</a></p>
+    </div>
+</div>
+
+<div class="main-orange">
+    <div class="container">
+        <p>WE WILL BE HAPPY TO SERVE ALL YOUR IT NEEDS.<br>
+        DO NOT HESITATE TO CONTACT US IN CASE OF ANY ISSUES</p>
+    </div>
+</div>
