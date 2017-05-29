@@ -25,9 +25,9 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <div class="container">
 
-    <div class="container">
+    <div class="container" style="min-width: 1000px">
         <div class="container row">
-            <div class="col-xs-6">
+            <div class="col-md-7">
                 <div class="logo-text">
                     <t id="logo-text-1">Best-PHP-</t><t id="logo-text-2">Developers</t><t id="logo-text-3">.com</t>
                 </div>
@@ -38,7 +38,7 @@ AppAsset::register($this);
                     More than <strong style="color: #f2b824">80</strong> PHP developers.
                 </div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-md-5">
                 <table class="inform-table">
                     <tr>
                         <td>

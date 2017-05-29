@@ -297,12 +297,57 @@ a.desc:after {
         left: 50%;
         margin-left: -350px;
     }
+    .top-left {
+        width: 330px;
+        left: 50%;
+        margin-left: -380px;
+    }
+    .top-right {
+        width: 330px;
+        left: 50%;
+        margin-left: -20px;
+    }
+    .bottom-left {
+        width: 330px;
+        left: 50%;
+        margin-left: -380px;
+        top: 370px;
+    }
+    .bottom-right {
+        width: 330px;
+        left: 50%;
+        margin-left: -20px;
+        top: 370px;
+    }
 }
 @media (min-width: 992px) {
     .content {
         width: 970px;
         left: 50%;
         margin-left: -430px;
+    }
+
+    .top-left {
+        width: 440px;
+        left: 50%;
+        margin-left: -500px;
+    }
+    .top-right {
+        width: 440px;
+        left: 50%;
+        margin-left: -30px;
+    }
+    .bottom-left {
+        width: 440px;
+        left: 50%;
+        margin-left: -500px;
+        top: 370px;
+    }
+    .bottom-right {
+        width: 440px;
+        left: 50%;
+        margin-left: -30px;
+        top: 370px;
     }
 }
 
@@ -311,6 +356,28 @@ a.desc:after {
         width: 1170px;
         left: 50%;
         margin-left: -530px;
+    }
+    .top-left {
+        width: 500px;
+        left: 50%;
+        margin-left: -580px;
+    }
+    .top-right {
+        width: 500px;
+        left: 50%;
+        margin-left: -30px;
+    }
+    .bottom-left {
+        width: 500px;
+        left: 50%;
+        margin-left: -580px;
+        top: 370px;
+    }
+    .bottom-right {
+        width: 500px;
+        left: 50%;
+        margin-left: -30px;
+        top: 370px;
     }
 }
 .main-hire .content {
@@ -332,10 +399,44 @@ a.desc:after {
     height: 500px;
 }
 
-.main-description {
+.main-hire .btn-warning {
+    background-color: #fab917;
+}
+
+.main-description .content {
+    font-size: 18 px;
+    color: #ffffff;
+    height: 648px;
+    font-family: Helvetical;
+    z-index:100;
+    position:absolute;
+    top:710px;
+}
+
+.main-description img{
     background-image: url("/img/main_info_bg.png");
     background-repeat: no-repeat;
-    color: #ffffff;
-    height: 1081px;
-    font-family: Helvetical;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 830px;
 }
+.main-description .content img {
+    background-image: url();
+    width: auto;
+    height: auto;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.main-description .top-left,
+.main-description .top-right,
+.main-description .bottom-left,
+.main-description .bottom-right {
+    position:absolute;
+    text-align: center;
+    vertical-align: middle;
+}
+
