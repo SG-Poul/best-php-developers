@@ -57,3 +57,10 @@ $this->title = 'Best PHP developers';
         </div>
     </div>
 </div>
+
+<div class="main-form">
+    <img src="/img/main_form_bg.png">
+    <div class="content">
+        <h2> FORM </h2>
+    </div>
+</div>
