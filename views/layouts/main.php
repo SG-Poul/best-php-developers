@@ -111,9 +111,15 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <div class="row">
+            <div class="col-xs-6">
+                <p><strong><a href="#">About Us</a>  |  <a href="#">Contact</a>  |  <a href="#">Site Map</a></strong> </p>
+                <p class="pull-left">Copyright &copy; best-php-developers.net | &copy; 2005 – <?= date('Y') ?></p>
+            </div>
+            <div class="col-xs-6">
+                <p style="padding-top: 9px">All rights Reserved. Design: best-php-developers.net Technologies</p>
+            </div>
+        </div>
     </div>
 </footer>
 

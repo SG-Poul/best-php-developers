@@ -276,3 +276,13 @@ a.desc:after {
     font-weight: bold;
     vertical-align: -2px;
 }
+
+.footer{
+    color: #ffffff;
+    background-color: #18284b;
+    min-height: 100px;
+}
+
+.footer a:link, .footer a:visited, .footer a:hover, .footer a:active  {
+    color: #ffffff;
+}
