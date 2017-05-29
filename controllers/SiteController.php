@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Qoute;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -60,7 +61,16 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $model = new Qoute();
+        if ($model->load(Yii::$app->getRequest()->post())) {
+//            if ($user = $model->signup()) {
+//                return $this->redirect(['login']);
+//            }
+        }
+
+        return $this->render('index', [
+            'model' => $model,
+        ]);
     }
 
     /**

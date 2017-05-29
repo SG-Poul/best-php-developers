@@ -2,6 +2,9 @@
 
 /* @var $this yii\web\View */
 
+use yii\bootstrap\ActiveForm;
+use yii\helpers\Html;
+
 $this->title = 'Best PHP developers';
 ?>
 
@@ -61,6 +64,58 @@ $this->title = 'Best PHP developers';
 <div class="main-form">
     <img src="/img/main_form_bg.png">
     <div class="content">
-        <h2> FORM </h2>
+        <br>
+        <h2>
+            <strong>QUICK FREE QUOTE</strong>
+        </h2>
+        <p>
+            <strong>Senior developers. Take a 1 week risk free trial.<br>
+                Starting at $1250 a month.
+            </strong>
+        </p>
+        <p style="font-family: Helvetical-light">None of your personal data will be sold. No spam is guaranteed.</p>
+        <br/>
+        <br/>
+        <?php $form = ActiveForm::begin(); ?>
+        <table>
+            <tr>
+                <td>
+                    <?= $form->field($model, 'name', [
+                        'inputOptions' => [
+                            'placeholder' => 'Name *']
+                    ])->textInput()->label(false) ?>
+                </td>
+                <td>
+                    <?= $form->field($model, 'email', [
+                        'inputOptions' => [
+                            'placeholder' => 'Email *']
+                    ])->textInput()->label(false) ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <?= $form->field($model, 'skype', [
+                        'inputOptions' => [
+                            'placeholder' => 'Skype *']
+                    ])->textInput()->label(false) ?>
+                </td>
+                <td>
+                    <?= $form->field($model, 'phone', [
+                        'inputOptions' => [
+                            'placeholder' => 'Phone *']
+                    ])->textInput()->label(false) ?>
+                </td>
+            </tr>
+        </table>
+        <?= $form->field($model, 'body', [
+                        'inputOptions' => [
+                            'placeholder' => 'Requirements']
+                    ])->textarea(['rows' => 4])->label(false) ?>
+
+        <div class="form-group">
+            <?= Html::submitButton('REQUEST FREE QUOTE NOW!', ['class' => 'btn btn-warning']) ?>
+        </div>
+
+        <?php ActiveForm::end(); ?>
     </div>
 </div>
