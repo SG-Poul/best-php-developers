@@ -2,6 +2,10 @@
     font-family: ProximaNova;
     src: url(./fonts/ProximaNova-Extrabld.ttf);
 }
+@font-face {
+    font-family: Helvetical;
+    src: url(./fonts/HelveticaNeueCyr-Light.otf);
+}
 
 html,
 body {
@@ -277,7 +281,7 @@ a.desc:after {
     vertical-align: -2px;
 }
 
-.footer{
+.footer {
     color: #ffffff;
     background-color: #18284b;
     min-height: 100px;
@@ -285,4 +289,53 @@ a.desc:after {
 
 .footer a:link, .footer a:visited, .footer a:hover, .footer a:active  {
     color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 750px;
+        left: 50%;
+        margin-left: -350px;
+    }
+}
+@media (min-width: 992px) {
+    .content {
+        width: 970px;
+        left: 50%;
+        margin-left: -430px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content {
+        width: 1170px;
+        left: 50%;
+        margin-left: -530px;
+    }
+}
+.main-hire .content {
+    font-size: 20px;
+    color: #ffffff;
+    height: 648px;
+    font-family: Helvetical;
+    z-index:100;
+    position:absolute;
+    top:250px;
+}
+
+.main-hire img {
+    background-image: url("/img/main_hire_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+.main-description {
+    background-image: url("/img/main_info_bg.png");
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: 1081px;
+    font-family: Helvetical;
 }
