@@ -24,42 +24,43 @@ AppAsset::register($this);
 <body>
 <?php $this->beginBody() ?>
 <div class="container header-logo">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="logo-text">
-                <t id="logo-text-1">Best-PHP-</t>
-                <t id="logo-text-2">Developers</t>
-                <t id="logo-text-3">.com</t>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="logo-text">
+                    <t id="logo-text-1">Best-PHP-</t>
+                    <t id="logo-text-2">Developers</t>
+                    <t id="logo-text-3">.com</t>
+                </div>
+                <div id="logo-rectangle-1">
+                    <p>QUALITY PHP DEVELOPMENT & PHP DEVELOPERS FOR HIRE</p>
+                </div>
+                <div id="logo-rectangle-2">
+                    More than <strong style="color: #f2b824">80</strong> PHP developers.
+                </div>
             </div>
-            <div id="logo-rectangle-1">
-                <p>QUALITY PHP DEVELOPMENT & PHP DEVELOPERS FOR HIRE</p>
-            </div>
-            <div id="logo-rectangle-2">
-                More than <strong style="color: #f2b824">80</strong> PHP developers.
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="social-icon">
-                <a href="#"><img src="img/vk.png"></a>
-                <a href="#"><img src="img/gp.png"></a>
-                <a href="#"><img src="img/fb.png"></a>
-                <a href="#"><img src="img/tw.png"></a>
-            </div>
+            <div class="col-md-6">
+                <div class="social-icon">
+                    <a href="#"><img src="img/vk.png"></a>
+                    <a href="#"><img src="img/gp.png"></a>
+                    <a href="#"><img src="img/fb.png"></a>
+                    <a href="#"><img src="img/tw.png"></a>
+                </div>
 
-            <div class="social-number">
-                <t class="ph-num">+1-347-630-0528</t>
-                <t class="ph-num">+49-302-5555-5704</t>
-                <t class="ph-num">+38-094-711-6778</t>
-                <img src="img/ph.png">
-            </div>
+                <div class="social-number">
+                    <t class="ph-num">+1-347-630-0528</t>
+                    <t class="ph-num">+49-302-5555-5704</t>
+                    <t class="ph-num">+38-094-711-6778</t>
+                    <img src="img/ph.png">
+                </div>
 
-            <div class="social-number">
-                <t class="ph-num">Best.Developers</t>
-                <img src="img/sk.png">
+                <div class="social-number">
+                    <t class="ph-num">Best.Developers</t>
+                    <img src="img/sk.png">
+                </div>
             </div>
         </div>
     </div>
-
 
     <?php
     NavBar::begin([
