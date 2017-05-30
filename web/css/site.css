@@ -19,7 +19,7 @@ body {
 /*Mobile*/
 
 @media (max-width: 991px) {
-    .header-logo col-md-6, .footer col-md-6 {
+    .header-logo .col-md-6, .footer .col-md-6, .main-hire .col-xs-6, .main-description .col-xs-6, .main-form .col-xs-6 {
         width: 100%
     }
     .logo-text {
@@ -74,6 +74,17 @@ body {
     .collapsing {
         overflow: hidden!important;
     }
+
+    .content {
+        margin-left: 30px;
+    }
+
+    .main-description {
+        background-image: none;
+        background-color: #18284b;
+        background-size: cover;
+        /*height: 1500px;*/
+    }
 }
 
 /* Desktop */
@@ -104,29 +115,15 @@ body {
     .content {
         width: 970px;
         left: 50%;
-        margin-left: -430px;
+        margin-left: -465px;
     }
-    .top-left {
-        width: 440px;
-        left: 50%;
-        margin-left: -500px;
-    }
-    .top-right {
-        width: 440px;
-        left: 50%;
-        margin-left: -30px;
-    }
-    .bottom-left {
-        width: 440px;
-        left: 50%;
-        margin-left: -500px;
-        top: 370px;
-    }
-    .bottom-right {
-        width: 440px;
-        left: 50%;
-        margin-left: -30px;
-        top: 370px;
+
+    .main-description {
+        background-image: url("/img/main_info_bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 850px;
     }
 }
 
@@ -158,29 +155,15 @@ body {
     .content {
         width: 1170px;
         left: 50%;
-        margin-left: -530px;
+        margin-left: -570px;
     }
-    .top-left {
-        width: 500px;
-        left: 50%;
-        margin-left: -580px;
-    }
-    .top-right {
-        width: 500px;
-        left: 50%;
-        margin-left: -30px;
-    }
-    .bottom-left {
-        width: 500px;
-        left: 50%;
-        margin-left: -580px;
-        top: 370px;
-    }
-    .bottom-right {
-        width: 500px;
-        left: 50%;
-        margin-left: -30px;
-        top: 370px;
+
+    .main-description {
+        background-image: url("/img/main_info_bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 830px;
     }
 }
 
@@ -248,12 +231,6 @@ body {
 
 .wrap > .container {
     padding: 70px 15px 20px;
-}
-
-.footer {
-    height: 70px;
-    background-color: #f5f5f5;
-    padding-top: 10px;
 }
 
 .jumbotron {
@@ -404,37 +381,34 @@ a.desc:after {
     font-weight: bold;
 }
 
-
 .footer {
     color: #ffffff;
     background-color: #18284b;
     min-height: 100px;
+    padding-top: 10px;
 }
 
 .footer a:link, .footer a:visited, .footer a:hover, .footer a:active  {
     color: #ffffff;
 }
 
+/*HOME PAGE */
 
-
-
-.main-hire .content {
-    font-size: 20px;
-    color: #ffffff;
-    height: 648px;
-    font-family: Helvetical;
-    z-index:100;
-    position:absolute;
-    top:250px;
-}
-
-.main-hire img {
+.main-hire {
     background-image: url("/img/main_hire_bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100%;
-    height: 500px;
+    min-height: 500px;
+}
+
+.main-hire .content {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: Helvetical;
+    z-index:100;
+    position:relative;
+    top:50px;
 }
 
 .main-hire .btn-warning, .main-form .btn-warning, .main-about .btn-warning {
@@ -442,53 +416,39 @@ a.desc:after {
 }
 
 .main-description .content {
-    font-size: 18 px;
+    font-size: 18px;
     color: #ffffff;
-    height: 648px;
     font-family: Helvetical;
-    z-index:100;
-    position:absolute;
-    top:710px;
+    position:relative;
+    top: 15px;
+    text-align: center;
 }
 
-.main-description img{
-    background-image: url("/img/main_info_bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 830px;
-}
 .main-description .content img {
-    background-image: url();
     width: auto;
     height: auto;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     display: block;
 }
 
-.main-description .top-left,
-.main-description .top-right,
-.main-description .bottom-left,
-.main-description .bottom-right {
-    position:absolute;
-    text-align: center;
-    vertical-align: middle;
+.main-description .col-xs-6 {
+    padding: 10px 40px;
 }
 
-
+.main-form {
+    background-image: url("/img/main_form_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
 
 .main-form .content {
     font-size: 18px;
     color: #18284b;
-    height: 500px;
-    z-index:100;
-    position:absolute;
-    top:1530px;
+    position: relative;
+    top: 5px;
     text-align: center;
-    vertical-align: middle;
 }
 
 .main-form .content .h2, .main-form .content .p {
@@ -496,27 +456,7 @@ a.desc:after {
     font-family: Helvetical;
 }
 
-.main-form img {
-    background-image: url("/img/main_form_bg.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 500px;
-}
-
-.main-form table {
-    margin: 0 auto;
-}
-
-.main-form td {
-    width: 300px;
-    padding: 0 5px;
-}
-
 .main-form textarea {
-    width: 590px;
-    margin: 0 auto;
     resize: none;
 }
 
@@ -524,23 +464,20 @@ a.desc:after {
     background-color: #fab917;
 }
 
-.main-about .content {
-    font-size: 20px;
-    color: #ffffff;
-    height: 460px;
-    font-family: Helvetical;
-    z-index:100;
-    position:absolute;
-    top:2070px;
-}
-
-.main-about img {
-    background-image: url("/img/main_hire_bg.png");
+.main-about {
+    background-image: url("/img/main_about_bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100%;
-    height: 500px;
+    min-height: 500px;
+}
+
+.main-about .content {
+    font-size: 20px;
+    color: #ffffff;
+    font-family: Helvetical;
+    position:relative;
+    top:20px;
 }
 
 .main-about .btn-warning {
