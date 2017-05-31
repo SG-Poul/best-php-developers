@@ -115,6 +115,20 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionPrices()
+    {
+        $model = new Qoute();
+        if ($model->load(Yii::$app->getRequest()->post())) {
+//            if ($user = $model->signup()) {
+//                return $this->redirect(['login']);
+//            }
+        }
+        // TODO : add email sending and DB saving
+        return $this->render('prices', [
+            'model' => $model,
+        ]);
+    }
+
     /**
      * Login action.
      *

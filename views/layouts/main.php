@@ -75,8 +75,9 @@ AppAsset::register($this);
             ['label' => 'PHP Development', 'url' => ['/site/development']],
             ['label' => 'Hire PHP Developers', 'url' => ['/site/developers']],
             ['label' => 'Dedicated PHP Team', 'url' => ['/site/team']],
-            ['label' => 'Prices', 'url' => ['/site/about']],
-            ['label' => 'Projects', 'url' => ['/site/about']],
+            ['label' => 'Prices', 'url' => ['/site/prices']],
+            ['label' => 'Projects', 'url' => ['/site/projects']],
+            ['label' => 'Company', 'url' => ['/site/about']],
             ['label' => 'Contacts', 'url' => ['/site/contact']],
         ],
     ]);
