@@ -102,7 +102,10 @@ $this->title = 'PHP DEVELOPMENT';
 
             </div>
             <div class="col-xs-4">
-                SIDEBAR
+                <?= $this->render('_sidebar', [
+                    'group' => 'company',
+                    'item' => '',
+                ]) ?>
             </div>
         </div>
 
