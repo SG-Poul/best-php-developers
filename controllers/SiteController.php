@@ -63,7 +63,6 @@ class SiteController extends Controller
     {
         $model = new Qoute();
         if ($model->load(Yii::$app->getRequest()->post())) {
-
 //            if ($user = $model->signup()) {
 //                return $this->redirect(['login']);
 //            }
