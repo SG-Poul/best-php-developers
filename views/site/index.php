@@ -11,10 +11,10 @@ $this->title = 'Best PHP developers';
 <div class="main-hire">
     <!--    <img src="/img/main_hire_bg.png">-->
     <div class="content">
-        <h2><strong>HIRE PHP DEVELOPERS</strong></h2>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-6">
+                    <h2><strong>HIRE PHP DEVELOPERS</strong></h2>
                     <br/>
                     <p>
                         All our developers have to attend different seminars and courses; in such a way, we make sure that

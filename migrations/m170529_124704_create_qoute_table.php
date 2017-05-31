@@ -14,10 +14,10 @@ class m170529_124704_create_qoute_table extends Migration
     {
         $this->createTable('qoute', [
             'id' => $this->primaryKey(),
-            'name' => $this->string(),
-            'email' => $this->string(),
-            'skype' => $this->string(),
-            'phone' => $this->string(),
+            'name' => $this->string()->notNull(),
+            'email' => $this->string()->notNull(),
+            'skype' => $this->string()->notNull(),
+            'phone' => $this->string()->notNull(),
             'body' => $this->text(),
             'created_at' => $this->dateTime(),
         ]);

@@ -34,6 +34,8 @@ class Qoute extends \yii\db\ActiveRecord
             [['body'], 'string'],
             [['created_at'], 'safe'],
             [['name', 'email', 'skype', 'phone'], 'string', 'max' => 255],
+            [['name', 'email', 'skype', 'phone'], 'required'],
+            [['email'], 'email'],
         ];
     }
 

@@ -67,7 +67,7 @@ class SiteController extends Controller
 //                return $this->redirect(['login']);
 //            }
         }
-
+        // TODO : add email sending and DB saving
         return $this->render('index', [
             'model' => $model,
         ]);
