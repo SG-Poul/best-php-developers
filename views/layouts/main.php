@@ -72,13 +72,12 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'PHP Development', 'url' => ['/site/about']],
+            ['label' => 'PHP Development', 'url' => ['/site/development']],
             ['label' => 'Hire PHP Developers', 'url' => ['/site/about']],
             ['label' => 'Dedicated PHP Team', 'url' => ['/site/about']],
             ['label' => 'Prices', 'url' => ['/site/about']],
             ['label' => 'Projects', 'url' => ['/site/about']],
             ['label' => 'Contacts', 'url' => ['/site/contact']],
-            ['label' => 'Sitemap', 'url' => ['/site/contact']],
         ],
     ]);
     NavBar::end();
