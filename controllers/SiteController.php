@@ -87,6 +87,19 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionDevelopers()
+    {
+        $model = new Qoute();
+        if ($model->load(Yii::$app->getRequest()->post())) {
+//            if ($user = $model->signup()) {
+//                return $this->redirect(['login']);
+//            }
+        }
+        // TODO : add email sending and DB saving
+        return $this->render('developers', [
+            'model' => $model,
+        ]);
+    }
 
     /**
      * Login action.

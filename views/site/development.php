@@ -72,7 +72,7 @@ $this->title = 'PHP DEVELOPMENT';
                     </ul>
                 </i>
 
-                <h3>Target Goals:</h3>
+                <h3><strong>Target Goals:</strong></h3>
 
                 <p>
                     We strive to provide reasonably priced and superior quality IT solutions that are delivered within
@@ -90,7 +90,7 @@ $this->title = 'PHP DEVELOPMENT';
                     and will also make it accessible to a number of users.
                 </p>
 
-                <h3>Facts You Should Know about Us</h3>
+                <h3><strong>Facts You Should Know about Us</strong></h3>
 
                 <p>
                     The most difficult work can be easily handled by our staff. It presumes a fact that apart from web
