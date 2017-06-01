@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models;
+namespace app\modules\admin\models;
 
 class User extends \yii\base\Object implements \yii\web\IdentityInterface
 {
@@ -14,17 +14,10 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
         '100' => [
             'id' => '100',
             'username' => 'admin',
-            'password' => 'admin',
-            'authKey' => 'test100key',
-            'accessToken' => '100-token',
-        ],
-        '101' => [
-            'id' => '101',
-            'username' => 'demo',
-            'password' => 'demo',
-            'authKey' => 'test101key',
-            'accessToken' => '101-token',
-        ],
+            'password' => '1234',
+            'authKey' => 'phiyUJftfh1F7gTXpMdCt63Xq0W8GE7S',
+            'accessToken' => 'GlkOZFNCPdcR7tsjCLY5vUa37kJ5m3jb',
+        ]
     ];
 
 

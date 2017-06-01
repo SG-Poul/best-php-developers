@@ -35,6 +35,8 @@ class QouteController extends Controller
      */
     public function actionIndex()
     {
+        if (\Yii::$app->user->id !== "100") return $this->goHome();
+
         $searchModel = new QouteSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -51,6 +53,8 @@ class QouteController extends Controller
      */
     public function actionView($id)
     {
+        if (\Yii::$app->user->id !== "100") return $this->goHome();
+
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -63,6 +67,8 @@ class QouteController extends Controller
      */
     public function actionCreate()
     {
+        if (\Yii::$app->user->id !== "100") return $this->goHome();
+
         $model = new Qoute();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -82,6 +88,8 @@ class QouteController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (\Yii::$app->user->id !== "100") return $this->goHome();
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -101,6 +109,8 @@ class QouteController extends Controller
      */
     public function actionDelete($id)
     {
+        if (\Yii::$app->user->id !== "100") return $this->goHome();
+
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -115,6 +125,8 @@ class QouteController extends Controller
      */
     protected function findModel($id)
     {
+        if (\Yii::$app->user->id !== "100") return $this->goHome();
+
         if (($model = Qoute::findOne($id)) !== null) {
             return $model;
         } else {

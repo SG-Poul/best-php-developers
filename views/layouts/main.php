@@ -6,6 +6,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\helpers\Url;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -102,6 +103,19 @@ AppAsset::register($this);
         </div>
     </div>
 </footer>
+
+<?php if (\Yii::$app->user->id === "100"): ?>
+    <div style="position: fixed; width: 200px;  top: 30px; right: 30px; border: 2px solid #fab917;
+                        border-radius: 15px; padding: 6px;">
+        <div style="text-align: right">
+            <?= Html::a('X', ['/admin/default/logout'], ['class' => 'btn btn-warning', 'data' => ['method' => 'post']]) ?>
+        </div>
+        <div style="text-align: center; margin-top: 5px">
+            <?= Html::a('Quotes', ['/qoute'], ['class' => 'btn btn-warning']) ?>
+            <?= Html::a('Edit page', ['/admin'], ['class' => 'btn btn-warning']) ?>
+        </div>
+    </div>
+<?php endif; ?>
 
 <?php $this->endBody() ?>
 </body>
