@@ -11,7 +11,7 @@ $this->title = 'PHP DEVELOPMENT';
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-9">
 
                 <p>
                     It will not be an exaggeration to state that there are thousands of programmers working online that
@@ -107,8 +107,11 @@ $this->title = 'PHP DEVELOPMENT';
                     </ul>
                 </i>
             </div>
-            <div class="col-xs-4">
-                SIDEBAR
+            <div class="col-xs-3">
+                <?= $this->render('_sidebar', [
+                    'group' => 'company',
+                    'item' => '',
+                ]) ?>
             </div>
         </div>
 

@@ -27,16 +27,14 @@ echo SideNav::widget([
         // (to determine the active status).
         //
         ['label' => '<strong>Company</strong>', 'active' => ($group == 'company'), 'items' => [
-            ['label' => 'About us', 'url' => Url::to(['/site/about', 'type'=>$type]), 'active' => ($item == 'about')],
-            ['label' => 'Certifications', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'certifications')],
-            ['label' => 'Education services', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'education')],
-            ['label' => 'Our Partners', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'partners')],
-            ['label' => 'Our People', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'people')],
-            ['label' => 'Testimonials', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'testimonials')],
-            ['label' => 'Vision and Values', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'vision')],
-            ['label' => 'Our photos', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'photos')],
-            ['label' => 'Clients', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'clients')],
-            ['label' => 'Why Best-PHP-Developers', 'url' => Url::to(['/site/#', 'type'=>$type]), 'active' => ($item == 'why')],
+            ['label' => 'About us', 'url' => Url::to(['/site/company/about']), 'active' => ($item == 'about')],
+            ['label' => 'Education services', 'url' => Url::to(['/site/company/education']), 'active' => ($item == 'education')],
+            ['label' => 'Our Partners', 'url' => Url::to(['/site/company/partners']), 'active' => ($item == 'partners')],
+            ['label' => 'Our People', 'url' => Url::to(['/site/company/people']), 'active' => ($item == 'people')],
+            ['label' => 'Vision and Values', 'url' => Url::to(['/site/company/vision']), 'active' => ($item == 'vision')],
+            ['label' => 'Our photos', 'url' => Url::to(['/site/#']), 'active' => ($item == 'photos')],
+            ['label' => 'Clients', 'url' => Url::to(['/site/#']), 'active' => ($item == 'clients')],
+            ['label' => 'Why Best-PHP-Developers', 'url' => Url::to(['/site/#']), 'active' => ($item == 'why')],
         ]],
 
         ['label' => '<strong>Services</strong>', 'items' => [

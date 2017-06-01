@@ -11,7 +11,7 @@ $this->title = 'PHP DEVELOPMENT';
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-9">
 
                 <p>
                     Our key goal is to deliver the best software development service that will positively influence your
@@ -101,7 +101,7 @@ $this->title = 'PHP DEVELOPMENT';
                 </p>
 
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-3">
                 <?= $this->render('_sidebar', [
                     'group' => 'company',
                     'item' => '',

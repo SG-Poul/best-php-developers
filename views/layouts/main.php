@@ -41,22 +41,22 @@ AppAsset::register($this);
             </div>
             <div class="col-md-6">
                 <div class="social-icon">
-                    <a href="#"><img src="img/vk.png"></a>
-                    <a href="#"><img src="img/gp.png"></a>
-                    <a href="#"><img src="img/fb.png"></a>
-                    <a href="#"><img src="img/tw.png"></a>
+                    <a href="#"><img src="/img/vk.png"></a>
+                    <a href="#"><img src="/img/gp.png"></a>
+                    <a href="#"><img src="/img/fb.png"></a>
+                    <a href="#"><img src="/img/tw.png"></a>
                 </div>
 
                 <div class="social-number">
                     <t class="ph-num">+1-347-630-0528</t>
                     <t class="ph-num">+49-302-5555-5704</t>
                     <t class="ph-num">+38-094-711-6778</t>
-                    <img src="img/ph.png">
+                    <img src="/img/ph.png">
                 </div>
 
                 <div class="social-number">
                     <t class="ph-num">Best.Developers</t>
-                    <img src="img/sk.png">
+                    <img src="/img/sk.png">
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@ AppAsset::register($this);
             ['label' => 'Dedicated PHP Team', 'url' => ['/site/team']],
             ['label' => 'Prices', 'url' => ['/site/prices']],
             ['label' => 'Projects', 'url' => ['/site/projects']],
-            ['label' => 'Company', 'url' => ['/site/about']],
+            ['label' => 'Company', 'url' => ['/site/company/about']],
             ['label' => 'Contacts', 'url' => ['/site/contact']],
         ],
     ]);

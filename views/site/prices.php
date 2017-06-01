@@ -11,7 +11,7 @@ $this->title = 'PHP DEVELOPMENT';
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-9">
 
                 <h3><strong>Fair Prices for Superior Quality Services</strong></h3>
 
@@ -45,7 +45,7 @@ $this->title = 'PHP DEVELOPMENT';
                 </p>
 
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-3">
                 SIDEBAR
             </div>
         </div>

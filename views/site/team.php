@@ -11,7 +11,7 @@ $this->title = 'PHP DEVELOPMENT';
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-9">
 
                 <p>
                     Modern days show that software and systems are solely focused on PHP language. Since it is
@@ -91,7 +91,7 @@ $this->title = 'PHP DEVELOPMENT';
                 </p>
 
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-3">
                 SIDEBAR
             </div>
         </div>

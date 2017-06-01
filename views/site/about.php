@@ -11,7 +11,7 @@ $this->title = 'PHP DEVELOPMENT';
 <div class="content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-8">
+            <div class="col-xs-9">
 
                 <h2><strong>About us</strong></h2>
 
@@ -108,7 +108,7 @@ $this->title = 'PHP DEVELOPMENT';
                 </p>
 
             </div>
-            <div class="col-xs-4">
+            <div class="col-xs-3">
                 <?= $this->render('_sidebar', [
                     'group' => 'company',
                     'item' => 'about',
