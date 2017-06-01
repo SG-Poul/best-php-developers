@@ -112,7 +112,7 @@ AppAsset::register($this);
         </div>
         <div style="text-align: center; margin-top: 5px">
             <?= Html::a('Quotes', ['/qoute'], ['class' => 'btn btn-warning']) ?>
-            <?= Html::a('Edit page', ['/admin'], ['class' => 'btn btn-warning']) ?>
+            <?= Html::a('Pages', ['/content'], ['class' => 'btn btn-warning']) ?>
         </div>
     </div>
 <?php endif; ?>

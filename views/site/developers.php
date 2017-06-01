@@ -4,6 +4,8 @@
 
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
+use vova07\imperavi\Widget;
+
 
 $this->title = 'PHP DEVELOPMENT';
 ?>
@@ -106,7 +108,29 @@ $this->title = 'PHP DEVELOPMENT';
                         <li>Transformation of simple ideas into sophisticated business solutions</li>
                     </ul>
                 </i>
+
+                <?php $form = ActiveForm::begin(); ?>
+
+                <?php
+                echo $form->field($model, 'body')->widget(Widget::className(), [
+                    'settings' => [
+                        'lang' => 'ru',
+                        'minHeight' => 200,
+                        'plugins' => [
+                            'clips',
+                            'fullscreen'
+                        ]
+                    ]
+                ]);
+                ?>
+
+                <div class="form-group">
+                    <?= Html::submitButton('REQUEST FREE QUOTE NOW!', ['class' => 'btn btn-warning']) ?>
+                </div>
+                <?php ActiveForm::end(); ?>
+
             </div>
+
             <div class="col-xs-3">
                 <?= $this->render('_sidebar', [
                     'group' => 'company',

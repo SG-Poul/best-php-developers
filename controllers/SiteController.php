@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Content;
 use app\models\Qoute;
 use Yii;
 use yii\filters\AccessControl;
@@ -9,6 +10,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\web\NotFoundHttpException;
 
 class SiteController extends Controller
 {
@@ -89,8 +91,8 @@ class SiteController extends Controller
 
     public function actionDevelopers()
     {
-        $model = new Qoute();
-        if ($model->load(Yii::$app->getRequest()->post())) {
+        $content = new Content();
+        if ($content->load(Yii::$app->getRequest()->post())) {
 //            if ($user = $model->signup()) {
 //                return $this->redirect(['login']);
 //            }
@@ -132,14 +134,11 @@ class SiteController extends Controller
     public function actionCompany($page)
     {
         $model = new Qoute();
-        if ($model->load(Yii::$app->getRequest()->post())) {
-//            if ($user = $model->signup()) {
-//                return $this->redirect(['login']);
-//            }
-        }
-        // TODO : add email sending and DB saving
-        return $this->render($page, [
+        $content = new Content();
+
+        return $this->render('company', [
             'model' => $model,
+            'content' => $this->findPage($page),
         ]);
     }
 
@@ -171,5 +170,18 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function findPage ($page)
+    {
+        if (($model = Content::find()->where(['page' => $page])->one()) !== null) {
+            return $model;
+        } else {
+            $model = new Content();
+            $model->page = $page;
+            return $model;
+//            throw new NotFoundHttpException('The requested page does not exist.'); todo UNCOMMENT
+
+        }
     }
 }
