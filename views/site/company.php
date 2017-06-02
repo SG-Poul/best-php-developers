@@ -40,7 +40,13 @@ $this->title = 'BEST-PHP-DEVELOPERS';
 
                 <!-- Trigger the modal with a button -->
                 <?php if (\Yii::$app->user->id !== "100"): ?>
-                    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#quoteModal">REQUEST FREE QUOTE</button>
+                    <br/>
+                    <button type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#quoteModal">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        REQUEST FREE QUOTE
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </button>
+                    <br/>
                 <?php endif; ?>
             </div>
 

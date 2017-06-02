@@ -33,7 +33,7 @@ body {
     .social-icon {
         padding-top: 3px;
         padding-right: 3px;
-        display: block;
+        display: none;
         width: 100%;
         text-align: center;
     }
@@ -41,7 +41,7 @@ body {
         font-size: 9px;
         padding-top: 3px;
         padding-right: 3px;
-        display: block;
+        display: none;
         width: 100%;
         text-align: right;
     }

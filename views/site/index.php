@@ -4,8 +4,29 @@
 
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
+use yii\web\View;
 
 $this->title = 'Best PHP developers';
+
+$this->registerJs(
+    "
+        (function($) {
+            $.fn.goTo = function() {
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top + 'px'
+                }, 'fast');
+                return this; // for chaining...
+            }
+        })(jQuery);
+
+        $('#quoteBtn').on('click', function(e) {
+            e.preventDefault();
+            $('.main-form').goTo();
+        });
+    ",
+    View::POS_READY,
+    'my-button-handler'
+);
 ?>
 
 <div class="main-hire">
@@ -22,7 +43,7 @@ $this->title = 'Best PHP developers';
                         headed with a supervisor that is responsible for continuous learning of its members.
                     </p>
                     <br/>
-                    <a style="font-size: 20px" class="btn btn-lg btn-warning" href="#">REQUEST FREE QUOTE</a>
+                    <a id="quoteBtn" style="font-size: 20px" class="btn btn-lg btn-warning">REQUEST FREE QUOTE</a>
                     <br/><br/><br/><br/>
                 </div>
             </div>
