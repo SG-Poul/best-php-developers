@@ -11,6 +11,11 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
+
+$currentUrl = Yii::$app->request->url;
+$urlArray = explode('/', Yii::$app->request->url);
+
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -73,12 +78,12 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'PHP Development', 'url' => ['/site/development']],
-            ['label' => 'Hire PHP Developers', 'url' => ['/site/developers']],
-            ['label' => 'Dedicated PHP Team', 'url' => ['/site/team']],
-            ['label' => 'Prices', 'url' => ['/site/prices']],
+            ['label' => 'PHP Development', 'url' => ['/site/company/development'], 'active' => ($urlArray[count($urlArray) - 1] == 'development')],
+            ['label' => 'Hire PHP Developers', 'url' => ['/site/company/hire'], 'active' => ($urlArray[count($urlArray) - 1] == 'hire')],
+            ['label' => 'Dedicated PHP Team', 'url' => ['/site/company/team'], 'active' => ($urlArray[count($urlArray) - 1] == 'team')],
+            ['label' => 'Prices', 'url' => ['/site/company/prices'], 'active' => ($urlArray[count($urlArray) - 1] == 'prices')],
             ['label' => 'Projects', 'url' => ['/site/projects']],
-            ['label' => 'Company', 'url' => ['/site/company']],
+            ['label' => 'Company', 'url' => ['/site/company/about'], 'active' => ($urlArray[count($urlArray) - 1] == 'about')],
             ['label' => 'Contacts', 'url' => ['/site/contact']],
         ],
     ]);
@@ -106,9 +111,10 @@ AppAsset::register($this);
 
 <?php if (\Yii::$app->user->id === "100"): ?>
     <div style="position: fixed; width: 200px;  top: 30px; right: 30px; border: 2px solid #fab917;
-                        border-radius: 15px; padding: 6px;">
+                border-radius: 15px; padding: 6px; background-color: rgba(255,255,255,0.7); z-index: 9999">
         <div style="text-align: right">
-            <?= Html::a('X', ['/admin/default/logout'], ['class' => 'btn btn-warning', 'data' => ['method' => 'post']]) ?>
+            <?= Html::a('X', ['/admin/default/logout'], ['class' => 'btn btn-warning btn-small', 'data' => ['method' => 'post'],
+                'style'=>'border-radius: 100%;']) ?>
         </div>
         <div style="text-align: center; margin-top: 5px">
             <?= Html::a('Quotes', ['/qoute'], ['class' => 'btn btn-warning']) ?>
@@ -116,6 +122,8 @@ AppAsset::register($this);
         </div>
     </div>
 <?php endif; ?>
+
+<?= \bluezed\scrollTop\ScrollTop::widget() ?>
 
 <?php $this->endBody() ?>
 </body>

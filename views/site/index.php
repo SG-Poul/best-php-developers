@@ -85,7 +85,9 @@ $this->title = 'Best PHP developers';
         <p style="font-family: Helvetical-light">None of your personal data will be sold. No spam is guaranteed.</p>
         <br/>
         <br/>
-        <?php $form = ActiveForm::begin(); ?>
+        <?php $form = ActiveForm::begin([
+            'action'=>'/site/quote'
+        ]); ?>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-6">
@@ -144,8 +146,6 @@ $this->title = 'Best PHP developers';
             <li>Only highly experienced members that work in PHP</li>
         </ul>
         <br/>
-        <a style="font-size: 20px" class="btn btn-lg btn-warning" href="#">REQUEST FREE QUOTE</a>
-        <br/><br/><br/>
     </div>
 </div>
 

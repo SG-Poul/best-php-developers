@@ -22,6 +22,7 @@ body {
     .main-hire .col-xs-6,
     .main-description .col-xs-6,
     .main-form .col-xs-6,
+    .modal-body .col-xs-6,
     .basic-page .col-xs-9,
     .basic-page .col-xs-3{
         width: 100%
@@ -428,7 +429,7 @@ a.desc:after {
     font-size: 18px;
     font-family: Helvetical;
 }
-.main-form textarea {
+.main-form textarea, .modal-body textarea {
     resize: none;
 }
 .main-form .btn-warning {
@@ -541,6 +542,32 @@ nav:hover .forAnimate{
 }
 .sidebar section{
     padding-left: 15px;
+}
+
+/*
+    Scroll to top
+*/
+
+.bluezed-scroll-top {
+    bottom: 70px!important;
+    right: 30px!important;
+}
+
+.bluezed-scroll-top-circle {
+    width: 40px!important;
+    height: 40px!important;
+    background-color: #fab917!important;
+    padding-top: 8px!important;
+    font-size: 1.5em!important;
+    border: 2px solid #ffffff!important;
+    color: #ffffff;
+}
+
+#quoteModal .modal-content{
+    background-image: url("/img/main_form_bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /** {*/

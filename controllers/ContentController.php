@@ -153,7 +153,7 @@ class ContentController extends Controller
 
     public function actionConvert ($id)
     {
-        $page = $this->findModel($id)->page;
+        $page = $this->findModel($id)->url;
 //        echo'/site/company/' . $page;
         return $this->redirect('/site/company/' . $page);
     }

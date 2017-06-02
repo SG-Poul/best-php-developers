@@ -64,12 +64,6 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $model = new Qoute();
-        if ($model->load(Yii::$app->getRequest()->post())) {
-//            if ($user = $model->signup()) {
-//                return $this->redirect(['login']);
-//            }
-        }
-        // TODO : add email sending and DB saving
         return $this->render('index', [
             'model' => $model,
         ]);
@@ -95,62 +89,15 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionDevelopment()
+    public function actionQuote ()
     {
+        // TODO : add email sending
         $model = new Qoute();
         if ($model->load(Yii::$app->getRequest()->post())) {
-//            if ($user = $model->signup()) {
-//                return $this->redirect(['login']);
-//            }
+            $model->save();
+            return $this->goHome();
         }
-        // TODO : add email sending and DB saving
-        return $this->render('development', [
-            'model' => $model,
-        ]);
     }
-
-    public function actionDevelopers()
-    {
-        $content = new Content();
-        if ($content->load(Yii::$app->getRequest()->post())) {
-//            if ($user = $model->signup()) {
-//                return $this->redirect(['login']);
-//            }
-        }
-        // TODO : add email sending and DB saving
-        return $this->render('developers', [
-            'model' => $model,
-        ]);
-    }
-
-    public function actionTeam()
-    {
-        $model = new Qoute();
-        if ($model->load(Yii::$app->getRequest()->post())) {
-//            if ($user = $model->signup()) {
-//                return $this->redirect(['login']);
-//            }
-        }
-        // TODO : add email sending and DB saving
-        return $this->render('team', [
-            'model' => $model,
-        ]);
-    }
-
-    public function actionPrices()
-    {
-        $model = new Qoute();
-        if ($model->load(Yii::$app->getRequest()->post())) {
-//            if ($user = $model->signup()) {
-//                return $this->redirect(['login']);
-//            }
-        }
-        // TODO : add email sending and DB saving
-        return $this->render('prices', [
-            'model' => $model,
-        ]);
-    }
-
 
     /**
      * Displays contact page.
@@ -168,16 +115,6 @@ class SiteController extends Controller
         return $this->render('contact', [
             'model' => $model,
         ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 
     public function findPage ($page)

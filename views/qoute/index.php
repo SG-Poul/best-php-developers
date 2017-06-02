@@ -13,9 +13,9 @@ $this->title = 'Qoutes';
 <div class="content">
     <div class="container-fluid">
         <div class="qoute-index">
-            <p>
-                <?= Html::a('Create Qoute', ['create'], ['class' => 'btn btn-success']) ?>
-            </p>
+<!--            <p>-->
+<!--                --><?//= Html::a('Create Qoute', ['create'], ['class' => 'btn btn-success']) ?>
+<!--            </p>-->
             <?= GridView::widget([
                 'dataProvider' => $dataProvider,
                 'filterModel' => $searchModel,
