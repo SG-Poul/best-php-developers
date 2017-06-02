@@ -94,7 +94,29 @@ class SiteController extends Controller
         // TODO : add email sending
         $model = new Qoute();
         if ($model->load(Yii::$app->getRequest()->post())) {
+            $model->created_at = date("Y-m-d H:i:s");
             $model->save();
+
+            Yii::$app->mailer->compose(/*'contact/html'*/)
+                ->setFrom('quote@best-php-developers.com')
+                ->setTo('admin@best-php-developers.com')
+                ->setSubject('New quote')
+                ->setHtmlBody(`
+                <b> ` . $model->name . `</b><br/>
+                <b> ` . $model->email . `</b><br/>
+                <b> ` . $model->skype . `</b><br/>
+                <b> ` . $model->phone . `</b><br/>
+                <b> ` . $model->body . `</b><br/>
+                `)
+                ->send();
+
+            Yii::$app->mailer->compose(/*'contact/html'*/)
+                ->setFrom('quote@best-php-developers.com')
+                ->setTo($model->email)
+                ->setSubject('Quote received')
+                ->setTextBody('Thank you for your quote. We will contact you shortly!')
+                ->send();
+
             return $this->goHome();
         }
     }
