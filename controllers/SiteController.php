@@ -75,6 +75,26 @@ class SiteController extends Controller
         ]);
     }
 
+    public function actionCompany($page = 'about')
+    {
+        $model = new Qoute();
+        $l = Content::find()->all();
+        $list = [];
+        foreach ($l as $i) {
+            if (!array_key_exists($i->category, $list)) {
+                $list[$i->category] = [];
+            }
+//            echo $i->category . '=>' . $i->page . '<br/>';
+            array_push($list[$i->category], ['name' => $i->page, 'url' => $i->url]);
+        }
+
+        return $this->render('company', [
+            'model' => $model,
+            'content' => $this->findPage($page),
+            'list' => $list,
+        ]);
+    }
+
     public function actionDevelopment()
     {
         $model = new Qoute();
@@ -131,18 +151,6 @@ class SiteController extends Controller
         ]);
     }
 
-    public function actionCompany($page)
-    {
-        $model = new Qoute();
-        $content = new Content();
-
-        return $this->render('company', [
-            'model' => $model,
-            'content' => $this->findPage($page),
-        ]);
-    }
-
-
 
     /**
      * Displays contact page.
@@ -174,7 +182,7 @@ class SiteController extends Controller
 
     public function findPage ($page)
     {
-        if (($model = Content::find()->where(['page' => $page])->one()) !== null) {
+        if (($model = Content::find()->where(['url' => $page])->one()) !== null) {
             return $model;
         } else {
             $model = new Content();

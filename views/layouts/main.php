@@ -78,7 +78,7 @@ AppAsset::register($this);
             ['label' => 'Dedicated PHP Team', 'url' => ['/site/team']],
             ['label' => 'Prices', 'url' => ['/site/prices']],
             ['label' => 'Projects', 'url' => ['/site/projects']],
-            ['label' => 'Company', 'url' => ['/site/company/about']],
+            ['label' => 'Company', 'url' => ['/site/company']],
             ['label' => 'Contacts', 'url' => ['/site/contact']],
         ],
     ]);

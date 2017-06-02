@@ -29,7 +29,7 @@ class Content extends \yii\db\ActiveRecord
     {
         return [
             [['body'], 'string'],
-            [['page', 'category'], 'string', 'max' => 255],
+            [['page', 'category', 'url'], 'string', 'max' => 255],
             [['page', 'category', 'body'], 'required'],
         ];
     }
@@ -42,6 +42,7 @@ class Content extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'page' => 'Page',
+            'url' => 'Url',
             'category' => 'Category',
             'body' => 'Body',
         ];

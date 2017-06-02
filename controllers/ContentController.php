@@ -77,7 +77,7 @@ class ContentController extends Controller
             $model = new Content();
 
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
+                $this->actionConvert($model->id);
             } else {
                 return $this->render('create', [
                     'model' => $model,

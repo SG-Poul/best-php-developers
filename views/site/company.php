@@ -9,7 +9,7 @@ use vova07\imperavi\Widget;
 $this->title = 'BEST-PHP-DEVELOPERS';
 ?>
 
-<div class="content">
+<div class="content basic-page">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-9">
@@ -41,11 +41,10 @@ $this->title = 'BEST-PHP-DEVELOPERS';
 
             <div class="col-xs-3">
                 <?= $this->render('_sidebar', [
-                    'group' => $content->category,
-                    'item' => $content->page,
+                    'list' => $list,
+                    'content' => $content,
                 ]) ?>
             </div>
         </div>
-
     </div>
 </div>

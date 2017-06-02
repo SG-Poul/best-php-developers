@@ -15,6 +15,7 @@ class m170601_110658_create_content_table extends Migration
         $this->createTable('content', [
             'id' => $this->primaryKey(),
             'page' => $this->string()->notNull()->unique(),
+            'url' => $this->string()->notNull()->unique(),
             'category' => $this->string(),
             'body' => $this->text(),
         ]);

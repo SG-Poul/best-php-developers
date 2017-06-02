@@ -13,9 +13,8 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'page')->textInput(['maxlength' => true]) ?>
-
+    <?= $form->field($model, 'url')->textInput(['maxlength' => true]) ?>
     <?= $form->field($model, 'category')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
