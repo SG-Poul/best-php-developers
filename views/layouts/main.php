@@ -110,15 +110,19 @@ $urlArray = explode('/', Yii::$app->request->url);
 </footer>
 
 <?php if (\Yii::$app->user->id === "100"): ?>
-    <div style="position: fixed; width: 200px;  top: 30px; right: 30px; border: 2px solid #fab917;
+    <div style="position: fixed; width: 160px;  top: 30px; right: 30px; border: 2px solid #fab917;
                 border-radius: 15px; padding: 6px; background-color: rgba(255,255,255,0.7); z-index: 9999">
         <div style="text-align: right">
             <?= Html::a('X', ['/admin/default/logout'], ['class' => 'btn btn-warning btn-small', 'data' => ['method' => 'post'],
                 'style'=>'border-radius: 100%;']) ?>
         </div>
         <div style="text-align: center; margin-top: 5px">
-            <?= Html::a('Quotes', ['/qoute'], ['class' => 'btn btn-warning']) ?>
-            <?= Html::a('Pages', ['/content'], ['class' => 'btn btn-warning']) ?>
+            <?= Html::a('Quotes', ['/qoute'], ['class' => 'btn btn-warning btn-block']) ?>
+            <?= Html::a('Pages', ['/content'], ['class' => 'btn btn-warning btn-block']) ?>
+            <?= Html::a('Gallery', ['/site/company/gallery'], ['class' => 'btn btn-warning btn-block']) ?>
+            <?= Html::a('Projects', ['#'], ['class' => 'btn btn-warning btn-block']) ?>
+
+
         </div>
     </div>
 <?php endif; ?>
