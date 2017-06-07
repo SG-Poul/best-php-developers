@@ -14,36 +14,50 @@ $this->title = 'BEST-PHP-DEVELOPERS';
         <div class="row">
             <div class="col-xs-9">
                 <!-- Image section Start -->
-
                 <?php
-                $imgCount = 0;
+                $items = [];
                 foreach ($images as $img) {
-                    echo '<div class="photo-container-small"><a title="\\' . $img . '" href="#"><img class="img-responsive img-modal" src="/' . $img . '"></a></div>';
+                    $tmp = [
+                        'url' => '/' . $img['normal'],
+                        'src' => '/' . $img['small'],
+                        'options' => array('title' => '')
+                    ];
+                    $items[] = $tmp;
                 }
                 ?>
-                <div tabindex="-1" class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button class="close" type="button" data-dismiss="modal">×</button>
-                            </div>
-                            <div class="modal-body">
+                <?= dosamigos\gallery\Gallery::widget(['items' => $items]);?>
 
-                            </div>
-                            <?php if (\Yii::$app->user->id === "100"): ?>
-                                <div class="modal-footer">
-                                    <button class="btn btn-danger delete-image">Delete</button>
-                                    <button class="btn btn-default" data-dismiss="modal">Close</button>
+                <?php if (\Yii::$app->user->id === "100"): ?>
+                    <hr>
+                    <?php
+                    $imgCount = 0;
+                    foreach ($images as $img) {
+                        echo '<div class="photo-container-small"><a title="\\' . $img['normal'] . '" href="#"><img class="img-responsive img-modal" src="/' . $img['normal'] . '"></a></div>';
+                    }
+                    ?>
+                    <div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" type="button" data-dismiss="modal">×</button>
                                 </div>
-                            <?php endif; ?>
+                                <div class="modal-body">
+
+                                </div>
+                                <?php if (\Yii::$app->user->id === "100"): ?>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-danger delete-image">Delete</button>
+                                        <button class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
 
-                <?php
-                $imageScript = <<< JS
+                    <?php
+                    $imageScript = <<< JS
         $('.img-modal').click(function(){
             $('.modal-body').empty();
   	        $($(this).parents('div').html()).appendTo('.modal-body');
@@ -59,11 +73,10 @@ $this->title = 'BEST-PHP-DEVELOPERS';
               });
         });
 JS;
-                $this->registerJs($imageScript, yii\web\View::POS_READY);
-                ?>
-                <!-- Image section End -->
+                    $this->registerJs($imageScript, yii\web\View::POS_READY);
+                    ?>
+                    <!-- Image section End -->
 
-                <?php if (\Yii::$app->user->id === "100"): ?>
                     <?php $form = ActiveForm::begin([
                         'options' => ['enctype' => 'multipart/form-data'],
                         'action'=>'/site/upload-img'

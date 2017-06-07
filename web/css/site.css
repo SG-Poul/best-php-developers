@@ -574,8 +574,8 @@ nav:hover .forAnimate{
     border: 1px solid #2A2A2A;
     display: inline-block;
     overflow:hidden;
-    width: 180px;
-    height: 140px;
+    width: 50px;
+    height: 50px;
     margin: 5px;
     border-radius: 4px;
 }
@@ -586,7 +586,6 @@ nav:hover .forAnimate{
     object-fit: cover;
 }
 
-
 .image-input {
     width: 100%;
     height: 90px;
@@ -594,6 +593,10 @@ nav:hover .forAnimate{
     border-radius: 7px;
     display: none;
     padding: 30px;
+}
+
+.gallery-item img {
+    margin: 5px;
 }
 
 /** {*/
