@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Portfolio;
 use Yii;
 use app\models\Content;
 use app\models\ContentSearch;
@@ -141,6 +142,39 @@ class ContentController extends Controller
 
             return $this->redirect(['index']);
         }
+    }
+
+    public function actionProjectDelete ()
+    {
+        if (\Yii::$app->user->id !== "100") {
+            return $this->goHome();
+        }
+        $model = Portfolio::find()->where(['id' => Yii::$app->request->post()['Content']['id']])->one();
+        $model->delete();
+        return $this->redirect(Yii::$app->request->referrer);
+    }
+
+    public function actionProjectSave ()
+    {
+        if (\Yii::$app->user->id !== "100") {
+            return $this->goHome();
+        }
+        print_r(Yii::$app->request->post()['Content']['id']);
+        $model = Portfolio::find()->where(['id' => Yii::$app->request->post()['Content']['id']])->one();
+        $model->body = Yii::$app->request->post()['Content']['body'];
+        $model->save();
+        return $this->redirect(Yii::$app->request->referrer);
+    }
+
+    public function actionProjectNew ()
+    {
+        if (\Yii::$app->user->id !== "100") {
+            return $this->goHome();
+        }
+        $model = new Portfolio();
+        $model->body = 'new record';
+        $model->save();
+        return $this->redirect(Yii::$app->request->referrer);
     }
 
     /**

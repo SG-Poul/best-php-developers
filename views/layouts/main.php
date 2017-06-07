@@ -82,7 +82,7 @@ $urlArray = explode('/', Yii::$app->request->url);
             ['label' => 'Hire PHP Developers', 'url' => ['/site/company/hire'], 'active' => ($urlArray[count($urlArray) - 1] == 'hire')],
             ['label' => 'Dedicated PHP Team', 'url' => ['/site/company/team'], 'active' => ($urlArray[count($urlArray) - 1] == 'team')],
             ['label' => 'Prices', 'url' => ['/site/company/prices'], 'active' => ($urlArray[count($urlArray) - 1] == 'prices')],
-            ['label' => 'Projects', 'url' => ['/site/projects']],
+            ['label' => 'Projects', 'url' => ['/site/company/projects']],
             ['label' => 'Company', 'url' => ['/site/company/about'], 'active' => ($urlArray[count($urlArray) - 1] == 'about')],
             ['label' => 'Contacts', 'url' => ['/site/contact']],
         ],
@@ -120,9 +120,7 @@ $urlArray = explode('/', Yii::$app->request->url);
             <?= Html::a('Quotes', ['/qoute'], ['class' => 'btn btn-warning btn-block']) ?>
             <?= Html::a('Pages', ['/content'], ['class' => 'btn btn-warning btn-block']) ?>
             <?= Html::a('Gallery', ['/site/company/gallery'], ['class' => 'btn btn-warning btn-block']) ?>
-            <?= Html::a('Projects', ['#'], ['class' => 'btn btn-warning btn-block']) ?>
-
-
+            <?= Html::a('Projects', ['/site/company/projects'], ['class' => 'btn btn-warning btn-block']) ?>
         </div>
     </div>
 <?php endif; ?>

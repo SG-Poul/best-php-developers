@@ -18,6 +18,10 @@ class ImageFile extends Model
 
     public function upload()
     {
+        if (\Yii::$app->user->id !== "100") {
+            return $this->goHome();
+        }
+
         if ($this->validate()) {
             $imageCount = 1;
             foreach ($this->uploadedFiles as $file) {
@@ -33,6 +37,10 @@ class ImageFile extends Model
     }
 
     public function resize_image($file, $w, $h, $crop=true) {
+        if (\Yii::$app->user->id !== "100") {
+            return $this->goHome();
+        }
+
         list($width, $height) = getimagesize('img/gallery/' . $file);
         $r = $width / $height;
         if ($crop) {
@@ -96,7 +104,10 @@ class ImageFile extends Model
 
     public function deleteImage($imageName)
     {
+        if (\Yii::$app->user->id !== "100") {
+            return $this->goHome();
+        }
         unlink('img/gallery/' . $imageName);
-        unlink('img/gallery/s_' . $imageName);
+//        unlink('img/gallery/s_' . $imageName);
     }
 }

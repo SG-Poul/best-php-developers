@@ -601,6 +601,12 @@ nav:hover .forAnimate{
     height: 160px;
 }
 
+.project-container {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+}
+
 /** {*/
 /*background: #000 !important;*/
 /*color: #0f0 !important;*/

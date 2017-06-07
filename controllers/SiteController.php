@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\Content;
 use app\models\ImageFile;
+use app\models\Portfolio;
 use app\models\Qoute;
 use Yii;
 use yii\filters\AccessControl;
@@ -92,6 +93,14 @@ class SiteController extends Controller
             return $this->render('gallery', [
                 'images' => $imgList,
                 'uploadModel' => $img,
+                'content' => $this->findPage($page),
+                'list' => $list,
+            ]);
+        } else if ($page === 'projects') {
+            $projects = Portfolio::find()->all();
+            return $this->render('projects', [
+                'projects' => $projects,
+                'model' => $model,
                 'content' => $this->findPage($page),
                 'list' => $list,
             ]);
