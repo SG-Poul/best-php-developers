@@ -3,14 +3,17 @@
 namespace app\controllers;
 
 use app\models\Content;
+use app\models\ImageFile;
 use app\models\Qoute;
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\Html;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\web\NotFoundHttpException;
+use yii\web\UploadedFile;
 
 class SiteController extends Controller
 {
@@ -82,12 +85,50 @@ class SiteController extends Controller
             array_push($list[$i->category], ['name' => $i->page, 'url' => $i->url]);
         }
 
+        if ($page === 'gallery') {
+            $img = new ImageFile();
+            $imgList = $img->getImages();
+
+            return $this->render('gallery', [
+                'images' => $imgList,
+                'uploadModel' => $img,
+                'content' => $this->findPage($page),
+                'list' => $list,
+            ]);
+        }
+
         return $this->render('company', [
             'model' => $model,
             'content' => $this->findPage($page),
             'list' => $list,
         ]);
     }
+
+    public function actionDeleteImg ()
+    {
+        if (\Yii::$app->user->id !== "100") return $this->goHome();
+
+
+        $imgModel = new ImageFile();
+        $imgList = Yii::$app->request->post('img');
+        $img = explode('\\', $imgList);
+        $imgModel->deleteImage($img[count($img) - 1]);
+        return $this->redirect(Yii::$app->request->referrer);
+    }
+
+    public function actionUploadImg ()
+    {
+        if (\Yii::$app->user->id !== "100") return $this->goHome();
+
+        $uploadModel = new ImageFile();
+        if (Yii::$app->request->post()) {
+            $uploadModel->uploadedFiles = UploadedFile::getInstances($uploadModel, 'uploadedFiles');
+            if ($uploadModel->upload()) {
+                return $this->redirect(Yii::$app->request->referrer);
+            }
+        }
+    }
+
 
     public function actionQuote ()
     {
