@@ -597,6 +597,8 @@ nav:hover .forAnimate{
 
 .gallery-item img {
     margin: 5px;
+    width: 195px;
+    height: 160px;
 }
 
 /** {*/

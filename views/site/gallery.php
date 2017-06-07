@@ -18,8 +18,8 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                 $items = [];
                 foreach ($images as $img) {
                     $tmp = [
-                        'url' => '/' . $img['normal'],
-                        'src' => '/' . $img['small'],
+                        'url' => '/' . $img,
+                        'src' => '/' . $img,
                         'options' => array('title' => '')
                     ];
                     $items[] = $tmp;
@@ -32,7 +32,7 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                     <?php
                     $imgCount = 0;
                     foreach ($images as $img) {
-                        echo '<div class="photo-container-small"><a title="\\' . $img['normal'] . '" href="#"><img class="img-responsive img-modal" src="/' . $img['normal'] . '"></a></div>';
+                        echo '<div class="photo-container-small"><a title="\\' . $img . '" href="#"><img class="img-responsive img-modal" src="/' . $img . '"></a></div>';
                     }
                     ?>
                     <div tabindex="-1" class="modal fade" id="myModal" role="dialog">
