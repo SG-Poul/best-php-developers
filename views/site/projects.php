@@ -20,32 +20,9 @@ $this->title = 'BEST-PHP-DEVELOPERS';
 
                 <?php foreach ($projects as $project):?>
                     <div class="project-container">
+                        <?= $project->body ?>
                         <?php if (\Yii::$app->user->id === "100"): ?>
-                            <?php
-                            $form = ActiveForm::begin([
-                                'action'=>'/content/project-save'
-                            ]);
-                            echo $form->field($project, 'body')->widget(Widget::className(), [
-                                'settings' => [
-                                    'lang' => 'en',
-                                    'minHeight' => 200,
-                                    'plugins' => [
-                                    ]
-                                ]
-                            ])->label(false);
-
-                            echo $form->field($content, 'id')->hiddenInput(['value'=> $project->id])->label(false);
-
-                            ?>
-
-                            <div class="form-group">
-                                <?= Html::submitButton('Save changes', ['class' => 'btn btn-warning']) ?>
-                                <?= Html::a('Delete', ['/content/project-delete'], ['class' => 'btn btn-danger', 'data' => ['method' => 'post', 'id' => $project->id]]) ?>
-                            </div>
-
-                            <?php ActiveForm::end(); ?>
-                        <?php else: ?>
-                            <?= $project->body ?>
+                            <?= Html::a('Edit', false, ['class' => 'btn btn-warning btn-block edit-project', 'id' => $project->id]) ?>
                         <?php endif; ?>
                     </div>
                 <?php endforeach;?>
@@ -69,7 +46,7 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                 ]) ?>
             </div>
 
-            <!-- Modal -->
+            <!-- Quote Modal -->
             <div id="quoteModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
 
@@ -127,6 +104,63 @@ $this->title = 'BEST-PHP-DEVELOPERS';
 
                 </div>
             </div>
+            <!--Project modal-->
+            <?php if (\Yii::$app->user->id === "100"):
+
+                $imageScript = <<< JS
+        $('.edit-project').click(function(){
+            var id = $(this).attr('id');
+            $('#portfolio-id').val(id);
+            console.log('id is ' + id);
+            console.log('#portfolio-id is ' + $('#portfolio-id').val());
+
+            // $('.modal-body').empty();
+  	       //  $($(this).parents('div').html()).appendTo('.modal-body');
+  	        $('#projectModal').modal({show:true});
+        });
+JS;
+                $this->registerJs($imageScript, yii\web\View::POS_READY);
+
+
+            ?>
+
+
+            <div id="projectModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <?php
+                            $tmpModel = new \app\models\Portfolio();
+                            $form = ActiveForm::begin([
+                                'action'=>'/content/project-save'
+                            ]);
+                            echo $form->field($tmpModel, 'body')->widget(Widget::className(), [
+                                'settings' => [
+                                    'lang' => 'en',
+                                    'minHeight' => 200,
+                                    'plugins' => [
+                                    ]
+                                ]
+                            ])->label(false);
+                            echo $form->field($tmpModel, 'id')->hiddenInput(['value'=> '1'])->label(false);
+                            ?>
+                            <div class="form-group">
+                                <?= Html::a('Delete project', ['/content/project-delete'], ['class' => 'btn btn-danger',
+                                    'id'=>'delete-project','data' => ['method' => 'post', 'id' => '1']]) ?>
+                                <?= Html::submitButton('Save changes', ['class' => 'btn btn-warning']) ?>
+                            </div>
+
+                            <?php ActiveForm::end(); ?>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <?php endif; ?>
 
         </div>
     </div>

@@ -149,7 +149,9 @@ class ContentController extends Controller
         if (\Yii::$app->user->id !== "100") {
             return $this->goHome();
         }
-        $model = Portfolio::find()->where(['id' => Yii::$app->request->post()['Content']['id']])->one();
+//        print_r(Yii::$app->request->post());
+
+        $model = Portfolio::find()->where(['id' => Yii::$app->request->post()['Portfolio']['id']])->one();
         $model->delete();
         return $this->redirect(Yii::$app->request->referrer);
     }
@@ -159,9 +161,9 @@ class ContentController extends Controller
         if (\Yii::$app->user->id !== "100") {
             return $this->goHome();
         }
-        print_r(Yii::$app->request->post()['Content']['id']);
-        $model = Portfolio::find()->where(['id' => Yii::$app->request->post()['Content']['id']])->one();
-        $model->body = Yii::$app->request->post()['Content']['body'];
+//        print_r(Yii::$app->request->post()['Portfolio']);
+        $model = Portfolio::find()->where(['id' => Yii::$app->request->post()['Portfolio']['id']])->one();
+        $model->body = Yii::$app->request->post()['Portfolio']['body'];
         $model->save();
         return $this->redirect(Yii::$app->request->referrer);
     }
