@@ -604,6 +604,7 @@ ol.indicator {
     /*width: 219px;*/
     height: auto;
     margin: 5px;
+    vertical-align: top;
 }
 
 .project-container img {
