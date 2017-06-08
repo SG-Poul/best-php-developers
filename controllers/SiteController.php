@@ -194,10 +194,10 @@ class SiteController extends Controller
         if (($model = Content::find()->where(['url' => $page])->one()) !== null) {
             return $model;
         } else {
-            $model = new Content();
-            $model->page = $page;
-            return $model;
-//            throw new NotFoundHttpException('The requested page does not exist.'); todo UNCOMMENT
+//            $model = new Content();
+//            $model->page = $page;
+//            return $model;
+            throw new NotFoundHttpException('The requested page does not exist.');
 
         }
     }

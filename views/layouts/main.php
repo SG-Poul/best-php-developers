@@ -84,7 +84,7 @@ $urlArray = explode('/', Yii::$app->request->url);
             ['label' => 'Prices', 'url' => ['/site/company/prices'], 'active' => ($urlArray[count($urlArray) - 1] == 'prices')],
             ['label' => 'Projects', 'url' => ['/site/company/projects']],
             ['label' => 'Company', 'url' => ['/site/company/about'], 'active' => ($urlArray[count($urlArray) - 1] == 'about')],
-            ['label' => 'Contacts', 'url' => ['/site/contact']],
+            ['label' => 'Contacts', 'url' => ['/site/company/contact'], 'active' => ($urlArray[count($urlArray) - 1] == 'contact')],
         ],
     ]);
     NavBar::end();
