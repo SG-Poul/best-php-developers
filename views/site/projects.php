@@ -5,6 +5,7 @@
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use vova07\imperavi\Widget;
+use yii\helpers\Url;
 
 $this->title = 'BEST-PHP-DEVELOPERS';
 ?>
@@ -18,11 +19,16 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                     <br/>
                 <?php endif; ?>
 
-                <?php foreach ($projects as $project):?>
+                <?php foreach ($projects as $project): ?>
+
                     <div class="project-container">
-                        <?= $project->body ?>
+                        <div class="project-body" id="<?= 'project_' . $project->id ?>">
+                            <?= $project->body ?>
+                        </div>
                         <?php if (\Yii::$app->user->id === "100"): ?>
-                            <?= Html::a('Edit', false, ['class' => 'btn btn-warning btn-block edit-project', 'id' => $project->id]) ?>
+                            <div class="edit-button-div">
+                                <?= Html::a('Edit', false, ['class' => 'btn btn-warning btn-block edit-project', 'id' => $project->id]) ?>
+                            </div>
                         <?php endif; ?>
                     </div>
                 <?php endforeach;?>
@@ -110,12 +116,11 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                 $imageScript = <<< JS
         $('.edit-project').click(function(){
             var id = $(this).attr('id');
+            var body = $('#project_' + String(id)).html();
             $('#portfolio-id').val(id);
-            console.log('id is ' + id);
-            console.log('#portfolio-id is ' + $('#portfolio-id').val());
-
-            // $('.modal-body').empty();
-  	       //  $($(this).parents('div').html()).appendTo('.modal-body');
+            $('#portfolio-body').val(body);
+            $('.redactor-editor').html(body);
+            // console.log('id is ' + id);
   	        $('#projectModal').modal({show:true});
         });
 JS;
@@ -140,9 +145,19 @@ JS;
                             ]);
                             echo $form->field($tmpModel, 'body')->widget(Widget::className(), [
                                 'settings' => [
-                                    'lang' => 'en',
-                                    'minHeight' => 200,
+                                    'lang' => 'ru',
+                                    'minHeight' => 300,
+                                    'imageUpload' => Url::to(['/content/image-upload']),
+                                    'imageManagerJson' => Url::to(['/content/images-get']),
                                     'plugins' => [
+                                        'fullscreen',
+                                        'clips',
+                                        'table',
+                                        'video',
+                                        'fontsize',
+                                        'fontfamily',
+                                        'fontcolor',
+                                        'imagemanager',
                                     ]
                                 ]
                             ])->label(false);

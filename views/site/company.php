@@ -5,6 +5,7 @@
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
 use vova07\imperavi\Widget;
+use yii\helpers\Url;
 
 $this->title = 'BEST-PHP-DEVELOPERS';
 ?>
@@ -20,10 +21,19 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                     ]);
                     echo $form->field($content, 'body')->widget(Widget::className(), [
                         'settings' => [
-                            'lang' => 'en',
-                            'minHeight' => 200,
+                            'lang' => 'ru',
+                            'minHeight' => 300,
+                            'imageUpload' => Url::to(['/content/image-upload']),
+                            'imageManagerJson' => Url::to(['/content/images-get']),
                             'plugins' => [
-                            ]
+                                'fullscreen',
+                                'clips',
+                                'table',
+                                'video',
+                                'fontsize',
+                                'fontfamily',
+                                'fontcolor',
+                                'imagemanager',
                         ]
                     ])->label(false);
                     echo $form->field($content, 'id')->hiddenInput(['value'=> $content->id])->label(false);

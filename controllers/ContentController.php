@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Portfolio;
+use vova07\imperavi\actions\GetAction;
 use Yii;
 use app\models\Content;
 use app\models\ContentSearch;
@@ -177,6 +178,23 @@ class ContentController extends Controller
         $model->body = 'new record';
         $model->save();
         return $this->redirect(Yii::$app->request->referrer);
+    }
+
+    public function actions()
+    {
+        return [
+            'images-get' => [
+                'class' => 'vova07\imperavi\actions\GetAction',
+                'url' => '/img',
+                'path' => '@webroot/img',
+                'type' => GetAction::TYPE_IMAGES,
+            ],
+            'image-upload' => [
+                'class' => 'vova07\imperavi\actions\UploadAction',
+                'url' => '/img',
+                'path' => '@webroot/img',
+            ],
+        ];
     }
 
     /**

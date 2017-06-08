@@ -89,6 +89,9 @@ body {
         background-size: cover;
         /*height: 1500px;*/
     }
+    .project-container {
+        max-width: 219px;
+    }
 }
 
 /* Desktop */
@@ -129,6 +132,9 @@ body {
         background-size: cover;
         height: 870px;
     }
+    .project-container {
+        width: 219px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -167,6 +173,10 @@ body {
         background-position: center;
         background-size: cover;
         height: 830px;
+    }
+
+    .project-container {
+        width: 269px;
     }
 }
 
@@ -603,8 +613,15 @@ nav:hover .forAnimate{
 
 .project-container {
     display: inline-block;
-    width: 300px;
+    /*width: 219px;*/
     height: auto;
+    margin: 5px;
+}
+
+.project-container img {
+    position: relative!important;
+    width: 100%!important;
+    height: auto!important;
 }
 
 /** {*/
