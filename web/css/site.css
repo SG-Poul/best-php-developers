@@ -611,6 +611,10 @@ nav:hover .forAnimate{
     height: 160px;
 }
 
+ol.indicator {
+    display: none!important;
+}
+
 .project-container {
     display: inline-block;
     /*width: 219px;*/
