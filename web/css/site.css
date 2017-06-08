@@ -182,28 +182,12 @@ body {
 
 /*HEADER LOGO*/
 
-.logo-text {
-    font-family: ProximaNova;
-    color: #161f57;
+#logoImage {
+    position: relative;
+    max-width: 100%;
+    height: auto;
 }
-#logo-text-1 {
-    color: #1b245b;
-    display: inline;
-    background: -webkit-linear-gradient(#6489be, #1b245b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-#logo-text-2 {
-    color: #1587e0;
-    display: inline;
-    background: -webkit-linear-gradient(#d0e6ff, #1587e0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-#logo-text-3 {
-    color: #1c76d0;
-    display: inline;
-}
+
 #logo-rectangle-1 {
     border: 1px solid #415d9d;
     color: #fff;
