@@ -51,22 +51,6 @@ class ContentController extends Controller
     }
 
     /**
-     * Displays a single Content model.
-     * @param integer $id
-     * @return mixed
-     */
-    public function actionView($id)
-    {
-        if (\Yii::$app->user->id !== "100") {
-            return $this->goHome();
-        } else {
-            return $this->render('view', [
-                'model' => $this->findModel($id),
-            ]);
-        }
-    }
-
-    /**
      * Creates a new Content model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
