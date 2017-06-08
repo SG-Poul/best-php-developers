@@ -13,7 +13,7 @@ class ImageFile extends Model
     public function rules()
     {
         return [
-            [['uploadedFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg', 'maxFiles' => 30]];
+            [['uploadedFiles'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg', 'maxFiles' => 20]];
     }
 
     public function upload()
@@ -27,7 +27,7 @@ class ImageFile extends Model
             foreach ($this->uploadedFiles as $file) {
                 if ($file->error == UPLOAD_ERR_OK) {
                     $file->saveAs('img/gallery/' . $file->baseName . '.' .  $file->extension);
-                    $this->resize_image($file->baseName . '.' .  $file->extension, 190, 160);
+//                    $this->resize_image($file->baseName . '.' .  $file->extension, 190, 160);
                 }
             }
             return true;
