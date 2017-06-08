@@ -34,6 +34,7 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                                 'fontfamily',
                                 'fontcolor',
                                 'imagemanager',
+                            ]
                         ]
                     ])->label(false);
                     echo $form->field($content, 'id')->hiddenInput(['value'=> $content->id])->label(false);
