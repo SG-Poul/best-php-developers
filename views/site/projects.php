@@ -30,6 +30,7 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                                 <?= Html::a('Edit', false, ['class' => 'btn btn-warning btn-block edit-project', 'id' => $project->id]) ?>
                             </div>
                         <?php endif; ?>
+                        <br/>
                     </div>
                 <?php endforeach;?>
 

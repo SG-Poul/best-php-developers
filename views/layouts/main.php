@@ -97,7 +97,7 @@ $urlArray = explode('/', Yii::$app->request->url);
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p><strong><a href="/site/company/about">About Us</a> | <a href="/site/contact">Contact</a>
+                <p><strong><a href="/web/site/company/about">About Us</a> | <a href="/web/site/company/contact">Contact</a>
                 <p>Copyright &copy; best-php-developers.net | &copy; 2005 – <?= date('Y') ?></p>
             </div>
             <div class="col-md-6">

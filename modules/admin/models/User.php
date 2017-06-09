@@ -14,7 +14,7 @@ class User extends \yii\base\Object implements \yii\web\IdentityInterface
         '100' => [
             'id' => '100',
             'username' => 'admin',
-            'password' => 'k*7QH^t?-(?ULB:@',
+            'password' => 'k*7QH^t?-(?ULB:',
             'authKey' => 'phiyUJftfh1F7gTXpMdCt63Xq0W8GE7S',
             'accessToken' => 'GlkOZFNCPdcR7tsjCLY5vUa37kJ5m3jb',
         ]

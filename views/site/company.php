@@ -17,7 +17,7 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                 <?php if (\Yii::$app->user->id === "100"): ?>
                     <?php
                     $form = ActiveForm::begin([
-                            'action'=>'/content/save'
+                            'action'=>'/web/content/save'
                     ]);
                     echo $form->field($content, 'body')->widget(Widget::className(), [
                         'settings' => [
