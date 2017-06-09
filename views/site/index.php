@@ -56,14 +56,14 @@ $this->registerJs(
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-6">
-                    <img src="/img/main_info_gears.png">
+                    <img src="/web/img/main_info_gears.png">
                     <h2><strong>PHP DEVELOPMENT</strong></h2>
                     <br/>
                     <p>Our PHP developers’ expertise and skills will be beneficial for any business owner who desires to
                         focus solely on their business management without wasting time on additional tasks.</p>
                 </div>
                 <div class="col-xs-6">
-                    <img src="/img/main_info_server.png">
+                    <img src="/web/img/main_info_server.png">
                     <h2><strong>DEDICATED PHP TEAM</strong></h2>
                     <br/>
                     <p>Best-php-developers.com offers only custom made projects, favorable and customer-oriented contract
@@ -72,7 +72,7 @@ $this->registerJs(
             </div>
             <div class="row">
                 <div class="col-xs-6">
-                    <img src="/img/main_info_shell.png">
+                    <img src="/web/img/main_info_shell.png">
                     <h2><strong>PHP DEVELOPERS</strong></h2>
                     <br/>
                     <p>All dedicated teams consisting of PHP developers at best-php-developers.com work remotely and serve
@@ -80,7 +80,7 @@ $this->registerJs(
                         instructions.</p>
                 </div>
                 <div class="col-xs-6">
-                    <img src="/img/main_info_growth.png">
+                    <img src="/web/img/main_info_growth.png">
                     <h2><strong>OUR BENEFITS</strong></h2>
                     <br/>
                     <p>Best-php-developers.com is aware of the modern workflow market and is acquainted with most
@@ -107,7 +107,7 @@ $this->registerJs(
         <br/>
         <br/>
         <?php $form = ActiveForm::begin([
-            'action'=>'/site/quote'
+            'action'=>'/web/site/quote'
         ]); ?>
         <div class="container-fluid">
             <div class="row">

@@ -64,7 +64,7 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                         </div>
                         <div class="modal-body">
                             <?php $form = ActiveForm::begin([
-                                'action'=>'/site/quote'
+                                'action'=>'/web/site/quote'
                             ]); ?>
                             <div class="container-fluid">
                                 <div class="row">
@@ -141,7 +141,7 @@ JS;
                             <?php
                             $tmpModel = new \app\models\Portfolio();
                             $form = ActiveForm::begin([
-                                'action'=>'/content/project-save'
+                                'action'=>'/web/content/project-save'
                             ]);
                             echo $form->field($tmpModel, 'body')->widget(Widget::className(), [
                                 'settings' => [

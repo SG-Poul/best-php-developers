@@ -126,7 +126,7 @@ body {
         position:relative;
     }
     .main-description {
-        background-image: url("/img/main_info_bg.png");
+        background-image: url("/web/img/main_info_bg.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -168,7 +168,7 @@ body {
         position:relative;
     }
     .main-description {
-        background-image: url("/img/main_info_bg.png");
+        background-image: url("/web/img/main_info_bg.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
@@ -372,7 +372,7 @@ a.desc:after {
 
 /*HOME PAGE */
 .main-hire {
-    background-image: url("/img/main_hire_bg.png");
+    background-image: url("/web/img/main_hire_bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -407,7 +407,7 @@ a.desc:after {
     padding: 10px 40px;
 }
 .main-form {
-    background-image: url("/img/main_form_bg.png");
+    background-image: url("/web/img/main_form_bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -430,7 +430,7 @@ a.desc:after {
     background-color: #fab917;
 }
 .main-about {
-    background-image: url("/img/main_about_bg.png");
+    background-image: url("/web/img/main_about_bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -558,7 +558,7 @@ nav:hover .forAnimate{
 }
 
 #quoteModal .modal-content{
-    background-image: url("/img/main_form_bg.png");
+    background-image: url("/web/img/main_form_bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -26,7 +26,7 @@ class ImageFile extends Model
             $imageCount = 1;
             foreach ($this->uploadedFiles as $file) {
                 if ($file->error == UPLOAD_ERR_OK) {
-                    $file->saveAs('img/gallery/' . $file->baseName . '.' .  $file->extension);
+                    $file->saveAs('..' .DIRECTORY_SEPARATOR . 'web' . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR . 'gallery' . DIRECTORY_SEPARATOR . $file->baseName . '.' .  $file->extension);
 //                    $this->resize_image($file->baseName . '.' .  $file->extension, 190, 160);
                 }
             }
@@ -41,7 +41,7 @@ class ImageFile extends Model
             return $this->goHome();
         }
 
-        list($width, $height) = getimagesize('img/gallery/' . $file);
+        list($width, $height) = getimagesize('web/img/gallery/' . $file);
         $r = $width / $height;
         if ($crop) {
             if ($width > $height) {
@@ -60,11 +60,11 @@ class ImageFile extends Model
                 $newwidth = $w;
             }
         }
-        $ext = pathinfo('img/gallery/' . $file, PATHINFO_EXTENSION);
+        $ext = pathinfo('web/img/gallery/' . $file, PATHINFO_EXTENSION);
         if ($ext === 'png') {
-            $src = imagecreatefrompng('img/gallery/' . $file);
+            $src = imagecreatefrompng('web/img/gallery/' . $file);
         } else {
-            $src = imagecreatefromjpeg('img/gallery/' . $file);
+            $src = imagecreatefromjpeg('web/img/gallery/' . $file);
         }
 
         $dst = imagecreatetruecolor($newwidth, $newheight);
@@ -76,9 +76,9 @@ class ImageFile extends Model
         imagecopyresampled($dst, $src, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
 
         if ($ext === 'png') {
-            imagepng($dst, 'img/gallery/s_' . $file);
+            imagepng($dst, 'web/img/gallery/s_' . $file);
         } else {
-            imagejpeg($dst, 'img/gallery/s_' . $file);
+            imagejpeg($dst, 'web/img/gallery/s_' . $file);
         }
 
 //        imagepng(imagecreatefromstring($dst), 'img/gallery/s_' . $file->baseName . '.png', 9, PNG_ALL_FILTERS);
@@ -88,7 +88,9 @@ class ImageFile extends Model
 
     public function getImages()
     {
-        return FileHelper::findFiles('img\gallery\\', ['only'=>['*.png', '*.jpg', '*.jpeg'], 'except'=>['s_*']]);
+//        echo basename(__DIR__);
+//        return null;
+        return FileHelper::findFiles( '..' .DIRECTORY_SEPARATOR . 'web' . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR . 'gallery', ['only'=>['*.png', '*.jpg', '*.jpeg'], 'except'=>['s_*']]);
 //        $newArray = [];
 //        foreach ($array as $img) {
 //            $tmpA = explode('\\', $img);
@@ -107,7 +109,8 @@ class ImageFile extends Model
         if (\Yii::$app->user->id !== "100") {
             return $this->goHome();
         }
-        unlink('img/gallery/' . $imageName);
+        $str = ltrim($imageName, DIRECTORY_SEPARATOR);
+        unlink($str);
 //        unlink('img/gallery/s_' . $imageName);
     }
 }

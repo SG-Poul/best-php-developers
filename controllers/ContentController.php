@@ -169,13 +169,13 @@ class ContentController extends Controller
         return [
             'images-get' => [
                 'class' => 'vova07\imperavi\actions\GetAction',
-                'url' => '/img',
+                'url' => '/web/img',
                 'path' => '@webroot/img',
                 'type' => GetAction::TYPE_IMAGES,
             ],
             'image-upload' => [
                 'class' => 'vova07\imperavi\actions\UploadAction',
-                'url' => '/img',
+                'url' => '/web/img',
                 'path' => '@webroot/img',
             ],
         ];

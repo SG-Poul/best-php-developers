@@ -34,7 +34,7 @@ $urlArray = explode('/', Yii::$app->request->url);
         <div class="row">
             <div class="col-md-6">
                 <div class="logo-text">
-                    <a href="/"><img id="logoImage" src="/img/logo.png"></a>
+                    <a href="/"><img id="logoImage" src="/web/img/logo.png"></a>
                 </div>
                 <div id="logo-rectangle-1">
                     <p>QUALITY PHP DEVELOPMENT & PHP DEVELOPERS FOR HIRE</p>
@@ -45,22 +45,22 @@ $urlArray = explode('/', Yii::$app->request->url);
             </div>
             <div class="col-md-6">
                 <div class="social-icon">
-                    <a href="http://vk.com/sg_it_company"><img src="/img/vk.png"></a>
-                    <a href="https://plus.google.com/u/0/b/106367725985310588511/dashboard/overview"><img src="/img/gp.png"></a>
-                    <a href="https://www.facebook.com/Soft-Group/"><img src="/img/fb.png"></a>
-                    <a href="https://twitter.com/SoftGroupCorp"><img src="/img/tw.png"></a>
+                    <a href="http://vk.com/sg_it_company"><img src="/web/img/vk.png"></a>
+                    <a href="https://plus.google.com/u/0/b/106367725985310588511/dashboard/overview"><img src="/web/img/gp.png"></a>
+                    <a href="https://www.facebook.com/Soft-Group/"><img src="/web/img/fb.png"></a>
+                    <a href="https://twitter.com/SoftGroupCorp"><img src="/web/img/tw.png"></a>
                 </div>
 
                 <div class="social-number">
                     <t class="ph-num"><a href="tel:+13476300528">+1-347-630-0528</a></t>
                     <t class="ph-num"><a href="tel:+4930255555704">+49-302-5555-5704</a></t>
                     <t class="ph-num"><a href="tel:+380947116778">+38-094-711-6778</a></t>
-                    <a href="tel:+13476300528"><img src="/img/ph.png"></a>
+                    <a href="tel:+13476300528"><img src="/web/img/ph.png"></a>
                 </div>
 
                 <div class="social-number">
                     <t class="ph-num"><a href="callto:Best.Developers">Best.Developers</a></t>
-                    <a href="callto:Best.Developers"><img src="/img/sk.png"></a>
+                    <a href="callto:Best.Developers"><img src="/web/img/sk.png"></a>
                 </div>
             </div>
         </div>

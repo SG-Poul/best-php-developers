@@ -67,7 +67,7 @@ $this->title = 'BEST-PHP-DEVELOPERS';
             event.preventDefault();
   	        var image = $('.modal-body').find('img').attr('src');
   	        console.log(image);
-  	        $.post( "/site/delete-img", { img : image })
+  	        $.post( "/web/site/delete-img", { img : image })
               .done(function( data ) {
                 location.reload();
               });
@@ -79,7 +79,7 @@ JS;
 
                     <?php $form = ActiveForm::begin([
                         'options' => ['enctype' => 'multipart/form-data'],
-                        'action'=>'/site/upload-img'
+                        'action'=>'/web/site/upload-img'
                     ]); ?>
                     <?= $form->field($uploadModel, 'uploadedFiles[]')->fileInput(['multiple' => true, 'class' => 'upload, image-input'])->label(false) ?>
                     <div class="form-group">

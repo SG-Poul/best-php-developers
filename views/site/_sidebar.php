@@ -43,7 +43,7 @@ $this->registerJs(
                         <ul class="dropdown-menu forAnimate " role="menu" id="<?= $group ?>">
                             <?php foreach ($value as $page): ?>
                                 <li>
-                                    <a href="/site/company/<?= $page['url'] ?>"
+                                    <a href="/web/site/company/<?= $page['url'] ?>"
                                         <?php if ($currentItem ==  $page['url']): ?>
                                             style="color: orange;"
                                         <?php endif; ?>

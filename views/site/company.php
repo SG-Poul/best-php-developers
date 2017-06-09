@@ -80,7 +80,7 @@ $this->title = 'BEST-PHP-DEVELOPERS';
                         </div>
                         <div class="modal-body">
                             <?php $form = ActiveForm::begin([
-                                'action'=>'/site/quote'
+                                'action'=>'/web/site/quote'
                             ]); ?>
                             <div class="container-fluid">
                                 <div class="row">
